@@ -89,10 +89,10 @@ public class GTMachineUtils {
 
     public static final int[] ALL_TIERS = GTValues.tiersBetween(ULV, GTCEuAPI.isHighTier() ? MAX : UHV);
     public static final int[] ELECTRIC_TIERS = GTValues.tiersBetween(LV, GTCEuAPI.isHighTier() ? OpV : UV);
-    public static final int[] LOW_TIERS = GTValues.tiersBetween(LV, EV);
-    public static final int[] HIGH_TIERS = GTValues.tiersBetween(IV, GTCEuAPI.isHighTier() ? OpV : UHV);
-    public static final int[] MULTI_HATCH_TIERS = GTValues.tiersBetween(EV, GTCEuAPI.isHighTier() ? MAX : UHV);
-    public static final int[] DUAL_HATCH_TIERS = GTValues.tiersBetween(LuV, GTCEuAPI.isHighTier() ? MAX : UHV);
+    public static final int[] LOW_TIERS = GTValues.tiersBetween(LV, MV);
+    public static final int[] HIGH_TIERS = GTValues.tiersBetween(HV, GTCEuAPI.isHighTier() ? OpV : UHV);
+    public static final int[] MULTI_HATCH_TIERS = GTValues.tiersBetween(LV, GTCEuAPI.isHighTier() ? MAX : UHV);
+    public static final int[] DUAL_HATCH_TIERS = GTValues.tiersBetween(LV, GTCEuAPI.isHighTier() ? MAX : UHV);
 
     public static final Int2IntFunction defaultTankSizeFunction = tier -> (tier <= GTValues.LV ? 8 :
             tier == GTValues.MV ? 12 : tier == GTValues.HV ? 16 : tier == GTValues.EV ? 32 : 64) *
